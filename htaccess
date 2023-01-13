@@ -1,0 +1,15 @@
+ErrorDocument 403 /page32381602.html
+ErrorDocument 404 /page32381602.html
+
+DirectoryIndex page32092002.html
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^error$ page32381602.html [NC]
+RewriteRule ^error/$ page32381602.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/tild3837-3437-4531-b939-353433643261/android-chrome-512x5.ico [R=302,L]
+
